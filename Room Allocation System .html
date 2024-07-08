@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Room Allocation System</title>
+<style>
+    /* Basic styles for the body to set the font and background color */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        padding: 20px;
+    }
+
+    /* Styles for the container that holds the form */
+    .container {
+        max-width: 600px;
+        margin: 0 auto; /* Center the container */
+        background-color: #ffffff; /* White background for the container */
+        padding: 50px;
+        border-radius: 8px; /* Rounded corners */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+    /* Center the heading text */
+    h1 {
+        text-align: center;
+    }
+
+    /* Styles for form groups to add spacing and layout */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Styles for labels to make them bold and add spacing */
+    .form-group label {
+        font-weight: bold;
+        display: block; /* Block display to occupy full width */
+        margin-bottom: 5px;
+    }
+
+    /* Styles for file input fields */
+    .form-group input[type="file"] {
+        width: 100%; /* Full width */
+        padding: 10px;
+        border: 1px solid #ccc; /* Gray border */
+        border-radius: 4px; /* Rounded corners */
+        box-sizing: border-box; /* Ensure padding and border are included in the width */
+    }
+
+    /* Styles for buttons */
+    .form-group button {
+        background-color: #4CAF50; /* Green background */
+        color: white; /* White text */
+        padding: 10px 20px;
+        border: none; /* No border */
+        border-radius: 4px; /* Rounded corners */
+        cursor: pointer; /* Pointer cursor on hover */
+        font-size: 16px;
+    }
+
+    /* Hover effect for buttons */
+    .form-group button:hover {
+        background-color: #45a049; /* Darker green on hover */
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Room Allocation System</h1>
+    <!-- Form for uploading files -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <!-- Form group for group file upload -->
+        <div class="form-group">
+            <label for="groupFile">Upload Group Information CSV File:</label>
+            <!-- File input for group information -->
+            <input type="file" id="groupFile" name="groupFile" accept=".csv" required>
+        </div>
+        <!-- Form group for hostel file upload -->
+        <div class="form-group">
+            <label for="hostelFile">Upload Hostel Information CSV File:</label>
+            <!-- File input for hostel information -->
+            <input type="file" id="hostelFile" name="hostelFile" accept=".csv" required>
+        </div>
+        <!-- Submit button -->
+        <div class="form-group">
+            <button type="submit" id="uploadButton">Upload Files</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>
